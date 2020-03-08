@@ -13,6 +13,7 @@ export default class LoginPage extends Component {
     }
 
     render() {
+        console.log(this.state)
         return (
             <div>
                 <form>
