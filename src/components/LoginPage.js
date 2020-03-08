@@ -6,6 +6,12 @@ export default class LoginPage extends Component {
         password: ''
     }
 
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
     render() {
         return (
             <div>
