@@ -21,7 +21,7 @@ export default class LoginPage extends Component {
         console.log(this.state)
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Username: </label>
                     <input type="text" name="username" value={this.state.username} onChange={this.handleChange} />
                     <label>Password: </label>
