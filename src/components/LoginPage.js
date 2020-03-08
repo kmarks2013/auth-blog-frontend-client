@@ -12,6 +12,11 @@ export default class LoginPage extends Component {
         })
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault()
+        console.log('i was submitted')
+    }
+
     render() {
         console.log(this.state)
         return (
