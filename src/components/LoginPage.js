@@ -14,8 +14,23 @@ export default class LoginPage extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log('i was submitted')
+        // console.log('i was submitted')
+        fetch('http://localhost:3000/login', {
+            method: "POST",
+            headers: {
+                "Content-Type": 'application/json',
+                Accept: 'application/json'
+            },
+            body: JSON.stringify(this.state)
+        })
+        .then(res => res.json())
+        .then( userData => {
+            console.log(userData)
+            localStorage.setItem("token", userData.token)
+        })
     }
+
+    
 
     render() {
         console.log(this.state)
